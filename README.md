@@ -1,36 +1,28 @@
-emoji-mart is a highly customizable emoji picker for React applications.
+# Emoji Picker React Component
 
-Installation
-You can install emoji-mart via npm:
+A React component for picking and displaying emojis.
 
-bash
-Copy code
-npm install emoji-mart
-Or using yarn:
+## Installation
 
-bash
-Copy code
-yarn add emoji-mart
-Usage
-jsx
-Copy code
+To use the Emoji Picker component in your React project, you can install it via npm:
+
+```bash
+npm install @gowtham-shankarr/emoji-mart
+
 import React from 'react';
-import { Picker } from 'emoji-mart';
+import EmojiPicker from '@your-username/emoji-picker';
 
-const MyEmojiPicker = () => {
+const App = () => {
   return (
-    <Picker />
+    <div>
+      <EmojiPicker emoji={emojiData.char} size={30} />
+    </div>
   );
 };
 
-export default MyEmojiPicker;
-For more advanced usage and customization options, please refer to the documentation.
+export default App;
 
-Examples
-Check out the examples directory for usage examples and demos.
 
-Contributing
-Contributions are welcome! Please read our contributing guidelines before submitting a pull request.
 
-License
-emoji-mart is MIT licensed.
+
+
