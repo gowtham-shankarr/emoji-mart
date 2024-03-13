@@ -2,14 +2,10 @@ import React from 'react';
 import emojisData from '../emoji.json';
 
 interface EmojiData {
-  codes: string;
   char: string;
   name: string;
-  category: string;
-  group: string;
-  subgroup: string;
+  category: string; 
 }
-
 
 interface EmojiProps {
   emoji: string;
@@ -50,7 +46,7 @@ const Emoji: React.FC<EmojiProps> = ({ emoji, size = 24, className = '' }) => {
       role="img"
       aria-label={emojiObject.name}
     >
-      {emojiObject.emoji}
+      {emojiObject.char}
     </span>
     </div>
   );
