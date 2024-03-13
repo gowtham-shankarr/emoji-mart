@@ -84,6 +84,7 @@ input {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
+  outline: none;
 }
 
 .search-input {
@@ -170,4 +171,9 @@ h1 {
   max-width: 600px;
   text-align: center;
   padding-top: 20px;
+}
+
+.no-results-message {
+  font-size: 18px;
+  font-weight: 700;
 }

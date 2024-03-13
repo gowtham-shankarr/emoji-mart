@@ -2,14 +2,10 @@ import React from 'react';
 import emojisData from '../emoji.json';
 
 interface EmojiData {
-  codes: string;
   char: string;
   name: string;
   category: string;
-  group: string;
-  subgroup: string;
 }
-
 
 interface EmojiProps {
   emoji: string;
@@ -23,8 +19,15 @@ interface EmojiCategory {
 
 const Emoji: React.FC<EmojiProps> = ({ emoji, size = 24, className = '' }) => {
   
+  const emojisDataTyped: EmojiCategory = emojisData.reduce((acc: EmojiCategory, emoji: EmojiData) => {
+    if (!acc[emoji.category]) {
+      acc[emoji.category] = [];
+    }
+    acc[emoji.category].push(emoji);
+    return acc;
+  }, {});
+
   const findEmoji = (emojiName: string): EmojiData | undefined => {
-    const emojisDataTyped = emojisData as EmojiCategory;
     for (const categoryKey in emojisDataTyped) {
       const emojiCategory: EmojiData[] = emojisDataTyped[categoryKey];
       const emojiObject = emojiCategory.find(item => item.name === emojiName);
@@ -35,7 +38,6 @@ const Emoji: React.FC<EmojiProps> = ({ emoji, size = 24, className = '' }) => {
     return undefined;
   };
   
-
   const emojiObject = findEmoji(emoji);
   console.log(emojiObject)
   if (!emojiObject) {
@@ -50,7 +52,7 @@ const Emoji: React.FC<EmojiProps> = ({ emoji, size = 24, className = '' }) => {
       role="img"
       aria-label={emojiObject.name}
     >
-      {emojiObject.emoji}
+      {emojiObject.char}
     </span>
     </div>
   );
