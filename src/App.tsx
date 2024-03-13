@@ -54,7 +54,7 @@ const EmojiPicker: React.FC = () => {
           </div>
         </div>
         {filteredEmojis.length === 0 ? (
-          <div>
+          <div className='text-center'>
             <img src={Empty} width={100} height={100} alt='empty' />
           <p className="no-results-message">No emojis found</p>
           </div>
