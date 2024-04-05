@@ -43,6 +43,9 @@ const EmojiPicker: React.FC = () => {
         <p className='description'>
           Select emojis and copy their corresponding React component code with ease. Simplify emoji integration in your React applications.
         </p>
+        <div className='package-select'>
+        npm i react-emoji-pickers
+        </div>
         <div className="text-center">
           <div className="search-input">
             <input

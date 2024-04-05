@@ -167,7 +167,7 @@ h1 {
 .description {
   margin: 0;
   color: #737373;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   max-width: 600px;
   text-align: center;
   padding-top: 20px;
@@ -176,4 +176,14 @@ h1 {
 .no-results-message {
   font-size: 18px;
   font-weight: 700;
+}
+
+.package-select {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
 }
