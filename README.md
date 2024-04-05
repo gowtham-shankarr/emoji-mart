@@ -7,21 +7,23 @@ A React component for picking and displaying emojis.
 To use the Emoji Picker component in your React project, you can install it via npm:
 
 ```bash
-npm install @gowtham-shankarr/emoji-mart
+npm install react-emoji-pickers
 
 import React from 'react';
-import EmojiPicker from '@your-username/emoji-picker';
+import EmojiPicker from 'emoji-picker';
 
 const App = () => {
   return (
     <div>
-      <EmojiPicker emoji={emojiData.char} size={30} />
+      <Emoji emoji="😑" size={40} />
     </div>
   );
 };
 
 export default App;
 
+### Visit this site 
+https://emoji.slightapps.com/
 
 
 
